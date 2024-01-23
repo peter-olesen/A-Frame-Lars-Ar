@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>AR Face by Peter Olesen</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
@@ -25,5 +25,12 @@
     <a-entity camera></a-entity>
     <a-light type="ambient" intensity="0.5"></a-light>
   </a-scene>
+  <script>
+    // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
+    const sceneEl = document.querySelector('a-scene');
+    sceneEl.addEventListener('loaded', () => {
+        sceneEl.camera = new THREE.PerspectiveCamera();
+    });
+    </script>
 </body>
 </html>
