@@ -9,7 +9,7 @@
 <body>
   <!--x, y, z -->
   <a-scene embedded arjs>
-    <a-marker smooth="true" smooth-count="10" smooth-tolerance="0.5" preset="hiro">
+    <a-marker preset="hiro">
       <!-- Head -->
       <a-sphere position="0 1.5 -2" radius="1" color="#FFDBAC"></a-sphere>
       <!-- Right eye -->
@@ -25,12 +25,5 @@
     <a-entity camera></a-entity>
     <a-light type="ambient" intensity="0.5"></a-light>
   </a-scene>
-  <!-- <script>
-    // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
-    const sceneEl = document.querySelector('a-scene');
-    sceneEl.addEventListener('loaded', () => {
-        sceneEl.camera = new THREE.PerspectiveCamera();
-    });
-    </script> -->
 </body>
 </html>
