@@ -8,7 +8,9 @@
 </head>
 <body>
   <!--x, y, z -->
-  <a-scene embedded arjs>
+  <a-scene
+      vr-mode-ui="enabled: false"
+      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
     <a-marker preset="hiro">
       <!-- Head -->
       <a-sphere position="0 1.5 -2" radius="1" color="#FFDBAC"></a-sphere>
